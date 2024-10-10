@@ -1,0 +1,39 @@
+{
+    "name": "html2print",
+    "version": "1.0.0",
+    "author": "Jean Rodriguez",
+    "description": "A Node.js module for printing HTML directly, specifically designed for POS printers and Electron applications. It utilizes wkhtmltopdf to convert HTML to PDF and pdf-to-printer to send the PDF to the printer without requiring user intervention or saving to disk. This module is not intended for use in browser environments.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jeanp117/html2print.git"
+    },
+    "keywords": [
+        "html",
+        "print",
+        "printer",
+        "pdf",
+        "node",
+        "electron",
+        "pos",
+        "thermal",
+        "escpos"
+    ],
+    "licence": "MIT",
+    "scripts": {
+        "start": "ts-node index.ts",
+        "build": "tsc --build",
+        "dev": "ts-node-dev --clear --respawn --exit-child --watch --transpile-only src/index.ts"
+    },
+    "dependencies": {
+        "pdf-to-printer": "5.6.0",
+        "tmp": "0.2.3",
+        "wkhtmltopdf": "0.4.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.7.5",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.6.3"
+    }
+}
